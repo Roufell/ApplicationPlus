@@ -12,9 +12,6 @@ namespace ApplicationPlus
 {
     public partial class Paint : Form
     {
-        /// <summary>
-        /// https://www.youtube.com/watch?v=no0K2Mf1nG8&t=34s
-        /// </summary>
         public Paint()
         {
             InitializeComponent();
