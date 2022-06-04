@@ -248,5 +248,12 @@ namespace ApplicationPlus
             txtDisplay.Text += (sender as Button).Text;
             decimalPointActive = true;
         }
+        /// <summary>
+        /// Полностью выключает программу
+        /// </summary>
+        private void _Closing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -358,6 +358,7 @@ namespace ApplicationPlus
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Calculator";
             this.Text = "Калькулятор";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this._Closing);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
