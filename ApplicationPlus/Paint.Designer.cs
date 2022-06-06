@@ -213,6 +213,7 @@ namespace ApplicationPlus
             this.button11.TabIndex = 5;
             this.button11.Text = "Назад";
             this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.backButton_Click);
             // 
             // Paint
             // 
@@ -228,6 +229,7 @@ namespace ApplicationPlus
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Paint";
             this.Text = "Рисовалка";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this._Closing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

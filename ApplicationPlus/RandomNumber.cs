@@ -39,15 +39,36 @@ namespace ApplicationPlus
 
         private void startButton_Click(object sender, EventArgs e)
         {
+            int min = 0, max = 0;
             try
             {
-                int min = int.Parse(textBox1.Text);
-                int max = int.Parse(textBox2.Text);
+                min = int.Parse(textBox1.Text);
+                max = int.Parse(textBox2.Text);
                 txtDisplay.Text = randomizer.Next(min,max+1).ToString(); 
             }
-            catch
+            catch (ArgumentOutOfRangeException) //если перепутали местами min и max
             {
-                MessageBox.Show("Ошибка","Успех");
+                int _min = min;
+                min = max;
+                max = _min;
+                MessageBox.Show("местами путать не надо!!", "Успех!");
+                textBox1.Text = min.ToString();
+                textBox2.Text = max.ToString();
+                txtDisplay.Text = randomizer.Next(min, max + 1).ToString();
+            }
+            catch (FormatException) //буква или пустое поле ввода
+            {
+                min = 1;
+                textBox1.Text = min.ToString();
+                max = 10;
+                textBox2.Text = max.ToString();
+                txtDisplay.Text = randomizer.Next(min, max + 1).ToString();
+            }
+            catch (OverflowException) //слишком много циферок для инта
+            {
+                MessageBox.Show("Слишком мно-о-о-го", "Успех!");
+                textBox1.Text = "";
+                textBox2.Text = "";
             }
         }
     }

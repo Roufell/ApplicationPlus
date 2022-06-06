@@ -35,6 +35,7 @@ namespace ApplicationPlus
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.info = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -66,6 +67,7 @@ namespace ApplicationPlus
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.45205F));
             this.tableLayoutPanel2.Controls.Add(this.button1, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.button2, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.info, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 258);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -85,6 +87,7 @@ namespace ApplicationPlus
             this.button1.TabIndex = 0;
             this.button1.Text = "Найти цвет";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.startButton_Click);
             // 
             // button2
             // 
@@ -94,6 +97,7 @@ namespace ApplicationPlus
             this.button2.TabIndex = 1;
             this.button2.Text = "назад";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.backButton);
             // 
             // label1
             // 
@@ -118,6 +122,16 @@ namespace ApplicationPlus
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
+            // info
+            // 
+            this.info.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.info.Location = new System.Drawing.Point(69, 13);
+            this.info.Name = "info";
+            this.info.ReadOnly = true;
+            this.info.Size = new System.Drawing.Size(144, 20);
+            this.info.TabIndex = 2;
+            this.info.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // RandomColor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -128,10 +142,10 @@ namespace ApplicationPlus
             this.Name = "RandomColor";
             this.Text = "Рандомный цвет";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this._Closing);
-            this.Click += new System.EventHandler(this.backButton);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -145,5 +159,6 @@ namespace ApplicationPlus
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox info;
     }
 }

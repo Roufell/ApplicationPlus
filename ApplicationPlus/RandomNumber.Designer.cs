@@ -182,12 +182,12 @@ namespace ApplicationPlus
             // 
             this.txtDisplay.Enabled = false;
             this.txtDisplay.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDisplay.Location = new System.Drawing.Point(115, 50);
-            this.txtDisplay.Margin = new System.Windows.Forms.Padding(115, 50, 3, 3);
+            this.txtDisplay.Location = new System.Drawing.Point(100, 50);
+            this.txtDisplay.Margin = new System.Windows.Forms.Padding(100, 50, 3, 3);
             this.txtDisplay.Multiline = true;
             this.txtDisplay.Name = "txtDisplay";
             this.txtDisplay.ReadOnly = true;
-            this.txtDisplay.Size = new System.Drawing.Size(60, 44);
+            this.txtDisplay.Size = new System.Drawing.Size(89, 44);
             this.txtDisplay.TabIndex = 1;
             this.txtDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 

@@ -16,6 +16,7 @@ namespace ApplicationPlus
         {
             InitializeComponent();
         }
+        Random randomizer = new Random();
 
         /// <summary>
         /// Возвращается в начальное меню
@@ -24,7 +25,7 @@ namespace ApplicationPlus
         {
             Hide();
             Form1 frm = new Form1();
-            frm.Hide();
+            frm.Show();
         }
 
         /// <summary>
@@ -33,6 +34,15 @@ namespace ApplicationPlus
         private void _Closing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void startButton_Click(object sender, EventArgs e)
+        {
+            int r = randomizer.Next(0, 256);
+            int g = randomizer.Next(0, 256);
+            int b = randomizer.Next(0, 256);
+            pictureBox1.BackColor = Color.FromArgb(255, r, g, b);
+            info.Text = $"{r},{g},{b}";
         }
     }
 }

@@ -30,5 +30,21 @@ namespace ApplicationPlus
             //Когда отпустили левою кнопку мыши.
             isMouse = false;
         }
+        /// <summary>
+        /// Полностью закрывает программу
+        /// </summary>
+        private void _Closing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+        /// <summary>
+        /// Возвращается в начальное меню
+        /// </summary>
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            Hide();
+            Form1 frm = new Form1();
+            frm.Show();
+        }
     }
 }
