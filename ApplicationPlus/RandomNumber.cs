@@ -16,6 +16,9 @@ namespace ApplicationPlus
         {
             InitializeComponent();
         }
+        Random randomizer = new Random();
+
+
         /// <summary>
         /// Полностью закрывает программу
         /// </summary>
@@ -32,6 +35,20 @@ namespace ApplicationPlus
             Hide();
             Form1 frm = new Form1();
             frm.Show();
+        }
+
+        private void startButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int min = int.Parse(textBox1.Text);
+                int max = int.Parse(textBox2.Text);
+                txtDisplay.Text = randomizer.Next(min,max+1).ToString(); 
+            }
+            catch
+            {
+                MessageBox.Show("Ошибка","Успех");
+            }
         }
     }
 }

@@ -37,9 +37,9 @@ namespace ApplicationPlus
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.txtDisplay = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.button2 = new System.Windows.Forms.Button();
+            this.txtDisplay = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -128,6 +128,8 @@ namespace ApplicationPlus
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(125, 20);
             this.textBox1.TabIndex = 2;
+            this.textBox1.Text = "1";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox2
             // 
@@ -135,6 +137,8 @@ namespace ApplicationPlus
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(125, 20);
             this.textBox2.TabIndex = 3;
+            this.textBox2.Text = "2";
+            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // button1
             // 
@@ -145,18 +149,6 @@ namespace ApplicationPlus
             this.button1.Text = "Назад";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.backButton);
-            // 
-            // txtDisplay
-            // 
-            this.txtDisplay.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDisplay.Location = new System.Drawing.Point(115, 50);
-            this.txtDisplay.Margin = new System.Windows.Forms.Padding(115, 50, 3, 3);
-            this.txtDisplay.Multiline = true;
-            this.txtDisplay.Name = "txtDisplay";
-            this.txtDisplay.ReadOnly = true;
-            this.txtDisplay.Size = new System.Drawing.Size(60, 44);
-            this.txtDisplay.TabIndex = 1;
-            this.txtDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // tableLayoutPanel4
             // 
@@ -184,6 +176,20 @@ namespace ApplicationPlus
             this.button2.TabIndex = 0;
             this.button2.Text = "Найти число";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.startButton_Click);
+            // 
+            // txtDisplay
+            // 
+            this.txtDisplay.Enabled = false;
+            this.txtDisplay.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDisplay.Location = new System.Drawing.Point(115, 50);
+            this.txtDisplay.Margin = new System.Windows.Forms.Padding(115, 50, 3, 3);
+            this.txtDisplay.Multiline = true;
+            this.txtDisplay.Name = "txtDisplay";
+            this.txtDisplay.ReadOnly = true;
+            this.txtDisplay.Size = new System.Drawing.Size(60, 44);
+            this.txtDisplay.TabIndex = 1;
+            this.txtDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // RandomNumber
             // 
