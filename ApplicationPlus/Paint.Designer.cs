@@ -44,6 +44,7 @@ namespace ApplicationPlus
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.button11 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -63,7 +64,7 @@ namespace ApplicationPlus
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(658, 386);
+            this.button1.Location = new System.Drawing.Point(658, 361);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(130, 23);
             this.button1.TabIndex = 1;
@@ -72,7 +73,7 @@ namespace ApplicationPlus
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(658, 415);
+            this.button2.Location = new System.Drawing.Point(658, 390);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(130, 23);
             this.button2.TabIndex = 2;
@@ -204,11 +205,21 @@ namespace ApplicationPlus
             this.trackBar1.Size = new System.Drawing.Size(159, 45);
             this.trackBar1.TabIndex = 5;
             // 
+            // button11
+            // 
+            this.button11.Location = new System.Drawing.Point(658, 419);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(130, 23);
+            this.button11.TabIndex = 5;
+            this.button11.Text = "Назад";
+            this.button11.UseVisualStyleBackColor = true;
+            // 
             // Paint
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button11);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.button2);
@@ -243,5 +254,6 @@ namespace ApplicationPlus
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TrackBar trackBar1;
+        private System.Windows.Forms.Button button11;
     }
 }
