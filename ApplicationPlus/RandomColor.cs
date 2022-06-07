@@ -42,7 +42,11 @@ namespace ApplicationPlus
             int g = randomizer.Next(0, 256);
             int b = randomizer.Next(0, 256);
             pictureBox1.BackColor = Color.FromArgb(255, r, g, b);
+            string hexR = Convert.ToString(r, 16).PadLeft(2, '0');
+            string hexG = Convert.ToString(g, 16).PadLeft(2, '0');
+            string hexB = Convert.ToString(b, 16).PadLeft(2, '0');
             info.Text = $"{r},{g},{b}";
+            hexInfo.Text = $"#{hexR}{hexG}{hexB}";
         }
     }
 }

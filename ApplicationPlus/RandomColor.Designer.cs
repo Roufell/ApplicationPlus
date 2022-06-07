@@ -33,9 +33,10 @@ namespace ApplicationPlus
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.info = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.info = new System.Windows.Forms.TextBox();
+            this.hexInfo = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -54,8 +55,8 @@ namespace ApplicationPlus
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.56684F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 56.14973F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 31.5508F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 53.74332F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.95722F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(289, 374);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
@@ -65,25 +66,27 @@ namespace ApplicationPlus
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.45204F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.09591F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.45205F));
-            this.tableLayoutPanel2.Controls.Add(this.button1, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.button2, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.info, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.button2, 0, 3);
+            this.tableLayoutPanel2.Controls.Add(this.button1, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.hexInfo, 1, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 258);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 249);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 3;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 31.85841F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 39.82301F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.31858F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(283, 113);
+            this.tableLayoutPanel2.RowCount = 4;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 29.34783F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 34.78261F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35.86956F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(283, 122);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // button1
             // 
             this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.Location = new System.Drawing.Point(69, 39);
+            this.button1.Location = new System.Drawing.Point(69, 62);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(144, 39);
+            this.button1.Size = new System.Drawing.Size(144, 27);
             this.button1.TabIndex = 0;
             this.button1.Text = "Найти цвет";
             this.button1.UseVisualStyleBackColor = true;
@@ -91,13 +94,23 @@ namespace ApplicationPlus
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(3, 84);
+            this.button2.Location = new System.Drawing.Point(3, 95);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(60, 23);
             this.button2.TabIndex = 1;
             this.button2.Text = "назад";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.backButton);
+            // 
+            // info
+            // 
+            this.info.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.info.Location = new System.Drawing.Point(69, 4);
+            this.info.Name = "info";
+            this.info.ReadOnly = true;
+            this.info.Size = new System.Drawing.Size(144, 20);
+            this.info.TabIndex = 2;
+            this.info.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
             // 
@@ -118,19 +131,19 @@ namespace ApplicationPlus
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Location = new System.Drawing.Point(3, 49);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(283, 203);
+            this.pictureBox1.Size = new System.Drawing.Size(283, 194);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // info
+            // hexInfo
             // 
-            this.info.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.info.Location = new System.Drawing.Point(69, 13);
-            this.info.Name = "info";
-            this.info.ReadOnly = true;
-            this.info.Size = new System.Drawing.Size(144, 20);
-            this.info.TabIndex = 2;
-            this.info.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.hexInfo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.hexInfo.Location = new System.Drawing.Point(69, 30);
+            this.hexInfo.Name = "hexInfo";
+            this.hexInfo.ReadOnly = true;
+            this.hexInfo.Size = new System.Drawing.Size(144, 20);
+            this.hexInfo.TabIndex = 3;
+            this.hexInfo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // RandomColor
             // 
@@ -160,5 +173,6 @@ namespace ApplicationPlus
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox info;
+        private System.Windows.Forms.TextBox hexInfo;
     }
 }
