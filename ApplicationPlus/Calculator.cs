@@ -33,12 +33,21 @@ namespace ApplicationPlus
             frm.Show();
         }
 
+        /// <summary>
+        /// метод для кнопки 'Copy'.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnCopy_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtDisplay.Text)) return;
             Clipboard.SetText(txtDisplay.Text);
         }
-
+        /// <summary>
+        /// метод для кнопки 'Reset'
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnReset_Click(object sender, EventArgs e)
         {
             decimalPointActive = false;
@@ -46,7 +55,11 @@ namespace ApplicationPlus
             previousOperation = Operation.None;
             txtDisplay.Clear();
         }
-
+        /// <summary>
+        /// метод для кнопки 'Cler'
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnClear_Click(object sender, EventArgs e)
         {
             decimalPointActive = false;
@@ -70,7 +83,11 @@ namespace ApplicationPlus
                 currentOperation = previousOperation;
             }
         }
-
+        /// <summary>
+        /// метод для кнопки 'диление'
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnDiv_Click(object sender, EventArgs e)
         {
             if (txtDisplay.TextLength == 0) return;
@@ -82,7 +99,11 @@ namespace ApplicationPlus
             EnableOperatorButtons(false);
             txtDisplay.Text += (sender as Button).Text;
         }
-
+        /// <summary>
+        /// метод для кнопки 'умножение'
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnMul_Click(object sender, EventArgs e)
         {
             if (txtDisplay.TextLength == 0) return;
@@ -93,7 +114,11 @@ namespace ApplicationPlus
             EnableOperatorButtons(false);
             txtDisplay.Text += (sender as Button).Text;
         }
-
+        /// <summary>
+        /// метод для кнопки 'минус'
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSub_Click(object sender, EventArgs e)
         {
             if (txtDisplay.TextLength == 0 || previousOperation == Operation.Sub) return;
@@ -105,7 +130,11 @@ namespace ApplicationPlus
             EnableOperatorButtons(false);
             txtDisplay.Text += (sender as Button).Text;
         }
-
+        /// <summary>
+        /// метод для кнопки 'плюс'
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAdd_Click(object sender, EventArgs e)
         {
             if (txtDisplay.TextLength == 0) return;
@@ -184,7 +213,11 @@ namespace ApplicationPlus
                 txtDisplay.Text = syntaxErr;
             }
         }
-
+        /// <summary>
+        /// метод для всех цифр
+        /// </summary>
+        /// <param name="btn"></param>
+        /// <param name="e"></param>
         private void BtnNun_Click(object btn, EventArgs e)
         {
             if (txtDisplay.Text == syntaxErr || txtDisplay.Text == divideByZero)
@@ -226,7 +259,11 @@ namespace ApplicationPlus
 
         Operation previousOperation = Operation.None;
         Operation currentOperation = Operation.None;
-
+        /// <summary>
+        /// метод для кнопки 'равно'
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnRes_Click(object sender, EventArgs e)
         {
             if (txtDisplay.TextLength == 0) return;
@@ -235,7 +272,11 @@ namespace ApplicationPlus
 
             previousOperation = Operation.None;
         }
-
+        /// <summary>
+        /// метод для конопки "точка(Десятичный)" 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnDecimal_Click(object sender, EventArgs e)
         {
             if (decimalPointActive) return;
