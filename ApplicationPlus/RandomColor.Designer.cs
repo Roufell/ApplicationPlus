@@ -31,12 +31,12 @@ namespace ApplicationPlus
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.info = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.hexInfo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.hexInfo = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -81,16 +81,15 @@ namespace ApplicationPlus
             this.tableLayoutPanel2.Size = new System.Drawing.Size(283, 122);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
-            // button1
+            // info
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.Location = new System.Drawing.Point(69, 62);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(144, 27);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Найти цвет";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.startButton_Click);
+            this.info.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.info.Location = new System.Drawing.Point(69, 4);
+            this.info.Name = "info";
+            this.info.ReadOnly = true;
+            this.info.Size = new System.Drawing.Size(144, 20);
+            this.info.TabIndex = 2;
+            this.info.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // button2
             // 
@@ -102,15 +101,26 @@ namespace ApplicationPlus
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.backButton);
             // 
-            // info
+            // button1
             // 
-            this.info.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.info.Location = new System.Drawing.Point(69, 4);
-            this.info.Name = "info";
-            this.info.ReadOnly = true;
-            this.info.Size = new System.Drawing.Size(144, 20);
-            this.info.TabIndex = 2;
-            this.info.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button1.Location = new System.Drawing.Point(69, 62);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(144, 27);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Найти цвет";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.startButton_Click);
+            // 
+            // hexInfo
+            // 
+            this.hexInfo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.hexInfo.Location = new System.Drawing.Point(69, 30);
+            this.hexInfo.Name = "hexInfo";
+            this.hexInfo.ReadOnly = true;
+            this.hexInfo.Size = new System.Drawing.Size(144, 20);
+            this.hexInfo.TabIndex = 3;
+            this.hexInfo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
             // 
@@ -134,16 +144,6 @@ namespace ApplicationPlus
             this.pictureBox1.Size = new System.Drawing.Size(283, 194);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
-            // 
-            // hexInfo
-            // 
-            this.hexInfo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.hexInfo.Location = new System.Drawing.Point(69, 30);
-            this.hexInfo.Name = "hexInfo";
-            this.hexInfo.ReadOnly = true;
-            this.hexInfo.Size = new System.Drawing.Size(144, 20);
-            this.hexInfo.TabIndex = 3;
-            this.hexInfo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // RandomColor
             // 

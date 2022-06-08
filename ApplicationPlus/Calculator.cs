@@ -56,7 +56,7 @@ namespace ApplicationPlus
             txtDisplay.Clear();
         }
         /// <summary>
-        /// метод для кнопки 'Cler'
+        /// метод для кнопки 'Clear'
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -64,23 +64,24 @@ namespace ApplicationPlus
         {
             decimalPointActive = false;
             PreCheck_ButtonClick();
-            if (txtDisplay.Text.Length > 0)
+            if (txtDisplay.Text.Length > 0) //Если длина текста на экране больше нуля
             {
                 double d;
-                if (!double.TryParse(txtDisplay.Text[txtDisplay.Text.Length - 1].ToString(), out d))
-                {
-                    previousOperation = Operation.None;
+                string lastSymbol = txtDisplay.Text[txtDisplay.Text.Length - 1].ToString(); //Получаем последний знак с экрана.
+                if (!double.TryParse(lastSymbol, out d)) //Пытаемся преобразовать последний символ из экрана, и получаем его в переменную d.
+                { //Если не получается преобразовать,
+                    previousOperation = Operation.None; //то забывается предыдущий знак.
                 }
 
                 txtDisplay.Text = txtDisplay.Text.Remove(txtDisplay.Text.Length - 1, 1);
             }
-            if (txtDisplay.Text.Length == 0)
+            if (txtDisplay.Text.Length == 0) //Если длина текста равна нулю,
             {
-                previousOperation = Operation.None;
+                previousOperation = Operation.None; //то забывается предыдущий знак.
             }
-            if (previousOperation != Operation.None)
+            if (previousOperation != Operation.None) //Если предыдущая операция не пустая,
             {
-                currentOperation = previousOperation;
+                currentOperation = previousOperation; //то предыдущая операция становится текущей.
             }
         }
         /// <summary>
@@ -90,7 +91,7 @@ namespace ApplicationPlus
         /// <param name="e"></param>
         private void btnDiv_Click(object sender, EventArgs e)
         {
-            if (txtDisplay.TextLength == 0) return;
+            if (txtDisplay.TextLength == 0) return; //Если длина текста на экране равна нулю, то метод закрывается.
             PreCheck_ButtonClick();
             currentOperation = Operation.Div;
             PerformCalculation(previousOperation);
@@ -106,7 +107,7 @@ namespace ApplicationPlus
         /// <param name="e"></param>
         private void btnMul_Click(object sender, EventArgs e)
         {
-            if (txtDisplay.TextLength == 0) return;
+            if (txtDisplay.TextLength == 0) return; //Если длина текста на экране равна нулю, то метод закрывается.
             PreCheck_ButtonClick();
             currentOperation = Operation.Mul;
             PerformCalculation(previousOperation);
@@ -121,7 +122,8 @@ namespace ApplicationPlus
         /// <param name="e"></param>
         private void btnSub_Click(object sender, EventArgs e)
         {
-            if (txtDisplay.TextLength == 0 || previousOperation == Operation.Sub) return;
+            if (txtDisplay.TextLength == 0 || previousOperation == Operation.Sub) return; //Если длина текста на экране равна нулю или
+                                                                                          //предыдущая операция равна "-", то метод закрывается.
             PreCheck_ButtonClick();
             currentOperation = Operation.Sub;
             PerformCalculation(previousOperation);
@@ -137,7 +139,7 @@ namespace ApplicationPlus
         /// <param name="e"></param>
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (txtDisplay.TextLength == 0) return;
+            if (txtDisplay.TextLength == 0) return; //Если длина текста на экране равна нулю, то метод закрывается.
             PreCheck_ButtonClick();
             currentOperation = Operation.Add;
             PerformCalculation(previousOperation);
@@ -150,22 +152,22 @@ namespace ApplicationPlus
         {
             try
             {
-                if (previousOperation == Operation.None)
-                    return;
-                List<double> lstNums = null;
+                if (previousOperation == Operation.None) //Если предыдущая операция пустая,
+                    return; //то выходим из метода.  
+                List<double> lstNums = null; //об. пустой коллекции.
 
                 switch (previousOperation)
                 {
-                    case Operation.Add:
-                        if (currentOperation == Operation.Sub)
+                    case Operation.Add: //Плюс
+                        if (currentOperation == Operation.Sub)  //Если текущая операция "равно",
                         {
-                            currentOperation = Operation.Add;
+                            currentOperation = Operation.Add; //то текущая операция присваивает операцию "+" и выходит из метода.
                             return;
                         }
                         lstNums = txtDisplay.Text.Split('+').Select(double.Parse).ToList();
                         txtDisplay.Text = (lstNums[0] + lstNums[1]).ToString();
                         break;
-                    case Operation.Sub:
+                    case Operation.Sub: //Минус
                         int idx = txtDisplay.Text.LastIndexOf('-'); // To handle ex: -9-2
                         if (idx > 0)
                         {
@@ -174,19 +176,19 @@ namespace ApplicationPlus
                             txtDisplay.Text = (op1 - op2).ToString();
                         }
                         break;
-                    case Operation.Mul:
-                        if (currentOperation == Operation.Sub)
+                    case Operation.Mul: //Умножения
+                        if (currentOperation == Operation.Sub) //Если текущая опреация "равно",
                         {
-                            currentOperation = Operation.Mul;
+                            currentOperation = Operation.Mul; //то текущая операция присваивает операцию "*" и выходит из метода.
                             return;
                         }
                         lstNums = txtDisplay.Text.Split('*').Select(double.Parse).ToList();
                         txtDisplay.Text = (lstNums[0] * lstNums[1]).ToString();
                         break;
-                    case Operation.Div:
-                        if (currentOperation == Operation.Sub)
+                    case Operation.Div: //Диления
+                        if (currentOperation == Operation.Sub) //Если текущая опреация "равно",
                         {
-                            currentOperation = Operation.Div;
+                            currentOperation = Operation.Div; //то текущая операция присваивает операцию "/" и выходит из метода.
                             return;
                         }
                         try
@@ -222,21 +224,28 @@ namespace ApplicationPlus
         {
             if (txtDisplay.Text == syntaxErr || txtDisplay.Text == divideByZero)
             {
-                txtDisplay.Text = string.Empty;
+                txtDisplay.Text = string.Empty; //Выводит ошибку на экран
             }
             EnableOperatorButtons();
             PreCheck_ButtonClick();
             txtDisplay.Text += (btn as Button).Text;
         }
+        /// <summary>
+        /// Предварительная проверка
+        /// </summary>
         private void PreCheck_ButtonClick()
         {
-            if (txtDisplay.Text == divideByZero || txtDisplay.Text == syntaxErr)
-                txtDisplay.Clear();
+            if (txtDisplay.Text == divideByZero || txtDisplay.Text == syntaxErr) txtDisplay.Clear(); //Если будет ошибка, то экран ввода очиститься
+
             if (previousOperation != Operation.None)
             {
                 EnableOperatorButtons();
             }
         }
+        /// <summary>
+        /// Включение кнопок оператора
+        /// </summary>
+        /// <param name="enable"></param>
         private void EnableOperatorButtons(bool enable = true)
         {
             btnMul.Enabled = enable;
@@ -257,8 +266,8 @@ namespace ApplicationPlus
             None
         }
 
-        Operation previousOperation = Operation.None;
-        Operation currentOperation = Operation.None;
+        Operation previousOperation = Operation.None; //Предыдущая операция
+        Operation currentOperation = Operation.None; //Текущая операция
         /// <summary>
         /// метод для кнопки 'равно'
         /// </summary>
@@ -273,7 +282,7 @@ namespace ApplicationPlus
             previousOperation = Operation.None;
         }
         /// <summary>
-        /// метод для конопки "точка(Десятичный)" 
+        /// метод для конопки "запятая(Не целые числа)" 
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

@@ -29,7 +29,6 @@ namespace ApplicationPlus
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -48,25 +47,13 @@ namespace ApplicationPlus
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.panel2 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(800, 450);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
-            this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
-            this.pictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseUp);
             // 
             // button1
             // 
@@ -194,6 +181,7 @@ namespace ApplicationPlus
             // 
             // panel1
             // 
+            this.panel1.BackgroundImage = global::ApplicationPlus.Properties.Resources.kosmos_art_tumannosti_ogni;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.trackBar1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -204,8 +192,10 @@ namespace ApplicationPlus
             // 
             // label1
             // 
+            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(159, 52);
@@ -215,6 +205,7 @@ namespace ApplicationPlus
             // 
             // trackBar1
             // 
+            this.trackBar1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.trackBar1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.trackBar1.Location = new System.Drawing.Point(0, 55);
             this.trackBar1.Maximum = 20;
@@ -235,6 +226,7 @@ namespace ApplicationPlus
             // 
             // panel2
             // 
+            this.panel2.BackgroundImage = global::ApplicationPlus.Properties.Resources.kosmos_art_tumannosti_ogni;
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.panel1);
             this.panel2.Controls.Add(this.button11);
@@ -245,6 +237,19 @@ namespace ApplicationPlus
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(159, 450);
             this.panel2.TabIndex = 6;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(800, 450);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
+            this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
+            this.pictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseUp);
             // 
             // Paint
             // 
@@ -257,12 +262,12 @@ namespace ApplicationPlus
             this.Name = "Paint";
             this.Text = "Рисовалка";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this._Closing);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

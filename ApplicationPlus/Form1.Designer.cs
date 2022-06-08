@@ -95,6 +95,7 @@ namespace ApplicationPlus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::ApplicationPlus.Properties.Resources.kosmos_art_tumannosti_ogni;
             this.ClientSize = new System.Drawing.Size(275, 247);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);

@@ -111,6 +111,7 @@ namespace ApplicationPlus
             this.tableLayoutPanel2.Controls.Add(this.btnCopy, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btn7, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.btnDecimal, 2, 4);
+            this.tableLayoutPanel2.Cursor = System.Windows.Forms.Cursors.Default;
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 53);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -120,6 +121,20 @@ namespace ApplicationPlus
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(203, 194);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
@@ -334,7 +349,7 @@ namespace ApplicationPlus
             this.btnDecimal.Name = "btnDecimal";
             this.btnDecimal.Size = new System.Drawing.Size(44, 36);
             this.btnDecimal.TabIndex = 20;
-            this.btnDecimal.Text = ".";
+            this.btnDecimal.Text = ",";
             this.btnDecimal.UseVisualStyleBackColor = true;
             this.btnDecimal.Click += new System.EventHandler(this.btnDecimal_Click);
             // 
@@ -352,6 +367,7 @@ namespace ApplicationPlus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(229, 299);
             this.Controls.Add(this.back);
             this.Controls.Add(this.tableLayoutPanel1);
@@ -370,7 +386,6 @@ namespace ApplicationPlus
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TextBox txtDisplay;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Button btnRes;
         private System.Windows.Forms.Button btn0;
         private System.Windows.Forms.Button btnAdd;
@@ -391,5 +406,6 @@ namespace ApplicationPlus
         private System.Windows.Forms.Button btn7;
         private System.Windows.Forms.Button btnDecimal;
         private System.Windows.Forms.Button back;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
     }
 }

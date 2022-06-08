@@ -104,6 +104,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="RandomColor.resx">
       <DependentUpon>RandomColor.cs</DependentUpon>
@@ -123,6 +124,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kosmos-art-tumannosti-ogni.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kosmos-art-tumannosti-ogni1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1619408888_5-phonoteka_org-p-fon-sero-belii-gradient-5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1612514419_26-p-serii-fon-dlya-fotoshopa-gradient-34.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
